@@ -23,8 +23,6 @@ def send_command(command, *args):
         OpenUri( Uri )
         Seeked( Position )
     '''
-    with open("/tmp/shit", "w") as f:
-        f.write("hello\n")
     session = dbus.SessionBus.get_session()
     spotify = session.get_object("org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2")
     getattr(spotify, command)(*args)
