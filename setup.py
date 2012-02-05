@@ -13,14 +13,15 @@ def read(fname):
         return ''
 
 setup(
-    name = 'duh',
-    description = 'Human output for du',
+    name = 'spotysend',
+    description = 'send commands to Spotify',
     long_description = read('README.rst'),
     license = 'http://www.gnu.org/licenses/gpl-2.0.html',
-    version = '1.00',
+    version = '1.01',
     author = 'Òscar Vilaplana',
     author_email = 'dev@oscarvilaplana.cat',
-    url = 'https://github.com/grimborg/duh',
-    py_modules = ['duh'],
-    entry_points = {'console_scripts': ['duh=duh:duh']},
+    url = 'https://github.com/grimborg/spotysend',
+    install_requires = ['opster'],
+    py_modules = ['spotysend'],
+    entry_points = {'console_scripts': ['spotysend=spotysend:send_command.command', ]},
     )

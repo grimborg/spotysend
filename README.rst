@@ -1,8 +1,21 @@
-It runs du -h and sorts its output.
+Spotysend sends commands to Spotify on GNU/Linux over the DBUS.
+
+The available commands are:
+
+* Raise 
+* Quit 
+* Next 
+* Previous 
+* Pause 
+* PlayPause 
+* Stop 
+* Play 
+* Seek( Offset )
+* SetPosition( TrackId, Position )
+* OpenUri( Uri )
+* Seeked( Position )
 
 For example::
 
-    $ duh -s *
-    1.0K    smallfile.txt
-    1.0M    biggerfile.bin
-    1.0G    largefile.bin
+    spotysend PlayPause
+
